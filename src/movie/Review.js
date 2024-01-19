@@ -5,17 +5,17 @@ const scoreButtonStyle = {
   padding: "0 0px 5px 5px",
 };
 
-function Review({ review, deleteReview, setReviewScore }) {
+function Review({ review, deleteReview, setScore }) {
   const handleIncreaseClick = () => {
     const score = review.score + 1;
     if (score > 5) return;
-    setReviewScore(review, score);
+    setScore(review, score);
   };
 
   const handleDecreaseClick = () => {
     const score = review.score - 1;
     if (score < 1) return;
-    setReviewScore(review, score);
+    setScore(review, score);
   };
 
   const { critic } = review;
